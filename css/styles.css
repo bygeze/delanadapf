@@ -13,6 +13,11 @@
     width: 64px;
 }
 
+#logo.rotate {
+    transform: rotateY(360deg);
+    transition: transform 1s;
+}
+
 .social-media img {
     margin-left: 1rem;
     width: 48px;
