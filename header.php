@@ -26,9 +26,9 @@
                 </div>
                 <div class="col-6 d-flex align-items-center justify-content-end">
                     <div class="social-media ">
-                        <a href="https://soundcloud.com/ezequiel-delanada"><img src="img/soundcloud.png" alt=""></a>
-                        <a href="https://open.spotify.com/artist/7AH746wyI5u5gjRK6Thauj?si=Vk_kzWHpSe6X9rtHtw5DlQ"><img src="img/spotify.png" alt=""></a>
-                        <a href="https://www.instagram.com/delanada.wav"><img src="img/instagram.png" alt=""></a>        
+                        <a href="https://soundcloud.com/ezequiel-delanada"><img src="<?php echo get_template_directory_uri(); ?>/img/soundcloud.png" alt=""></a>
+                        <a href="https://open.spotify.com/artist/7AH746wyI5u5gjRK6Thauj?si=Vk_kzWHpSe6X9rtHtw5DlQ"><img src="<?php echo get_template_directory_uri(); ?>/img/spotify.png" alt=""></a>
+                        <a href="https://www.instagram.com/delanada.wav"><img src="<?php echo get_template_directory_uri(); ?>/img/instagram.png" alt=""></a>        
                     </div>
                 </div>
             </div>
