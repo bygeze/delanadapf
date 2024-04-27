@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<section class="container-fluid" id="landing">
+<section class="container-fluid" id="landing"  style="background-image: url(<?php echo get_template_directory_uri(); ?>/img/bg-landing.jpg);">
         <div class="container" id="landing-content">
             <div class="row h-100">
                 <div class="col-lg-6 col-xs-0"></div>
