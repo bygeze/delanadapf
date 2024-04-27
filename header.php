@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="es">
+<html <?php language_attributes();?>>
 <head>
-    <meta charset="UTF-8">
+    <meta charset="<?php bloginfo( 'charset' );?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -18,11 +18,12 @@
 
 </head>
 <body>
-    <section class="container-fluid" id="topbar">
+<section class="container-fluid" id="topbar">
         <div class="container">
             <div class="row">
                 <div class="col-6">
-                    <a href="#"><img id="logo" src="img/logo-256.png"></a>    
+                
+                    <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/logo-256.png" alt="Nombre del Sitio"></a>    
                 </div>
                 <div class="col-6 d-flex align-items-center justify-content-end">
                     <div class="social-media ">
