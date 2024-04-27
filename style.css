@@ -5,3 +5,12 @@ Description: Tema para Ezequiel Delanada
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 */
+
+#landing {
+    background-color: black;
+}
+
+.whole-page {
+    height: 100%;
+    width: 100%;
+}

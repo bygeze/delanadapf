@@ -1,5 +1,13 @@
 <?php get_header(); ?>
 
+<div id="landing" class="whole-page">
+    <p>logo</p>
+</div>
+
+<div id="front-page" class="d-none">
+
+</div>
+<!--
 <section class="container-fluid" id="landing">
         <div class="container" id="landing-content">
             <div class="row h-100">
@@ -13,5 +21,7 @@
             </div>
         </div>
 </section>
+-->
+
 
 <?php get_footer(); ?>
