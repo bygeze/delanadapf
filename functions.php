@@ -47,6 +47,8 @@ function add_sets_menu() {
 
 // Función de renderizado del contenido de la página "Sets"
 function render_sets_page() {
+    global $wpdb;
+    $tabla_sets = $wpdb->prefix . 'sets';
     ?>
     <div class="wrap">
         <h1>Sets</h1>
@@ -81,7 +83,18 @@ function render_sets_page() {
                 </tr>
             </thead>
             <tbody>
-                <!-- Aquí se mostrarán los sets agregados -->
+                <?php
+                // Obtener y mostrar los sets de la base de datos
+                $sets = $wpdb->get_results("SELECT * FROM $tabla_sets");
+                foreach ($sets as $set) {
+                    echo '<tr>';
+                    echo '<td>' . esc_html($set->titulo) . '</td>';
+                    echo '<td><a href="' . esc_url($set->soundcloud_link) . '" target="_blank">' . esc_html($set->soundcloud_link) . '</a></td>';
+                    echo '<td><a href="' . esc_url($set->youtube_link) . '" target="_blank">' . esc_html($set->youtube_link) . '</a></td>';
+                    echo '<td><img src="' . esc_url($set->thumbnail) . '" width="100"></td>';
+                    echo '</tr>';
+                }
+                ?>
             </tbody>
         </table>
     </div>
