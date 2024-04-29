@@ -55,7 +55,10 @@ function render_sets_page() {
 
         <!-- Formulario para añadir sets -->
         <h2>Añadir Nuevo Set</h2>
-        <form method="post" enctype="multipart/form-data">
+        <form method="post" enctype="multipart/form-data" action="<?php echo esc_url(admin_url('admin-post.php')); ?>">
+            <!-- Campo de nonce de seguridad -->
+            <?php wp_nonce_field('add_set_nonce', 'add_set_nonce'); ?>
+
             <label for="titulo">Título:</label><br>
             <input type="text" name="titulo" id="titulo" required><br>
 
@@ -67,6 +70,9 @@ function render_sets_page() {
 
             <label for="thumbnail">Thumbnail:</label><br>
             <input type="file" name="thumbnail" id="thumbnail" accept="image/*" required><br>
+
+            <!-- Campo de acción para manejar la subida de sets -->
+            <input type="hidden" name="action" value="add_set">
 
             <input type="submit" name="submit" value="Subir" class="button-primary">
         </form>
@@ -100,6 +106,8 @@ function render_sets_page() {
     </div>
     <?php
 }
+
+
 
 // Función para manejar la subida de sets
 add_action('admin_post_add_set', 'add_set_to_database');
