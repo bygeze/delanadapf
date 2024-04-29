@@ -24,5 +24,43 @@ function add_sets_menu() {
 
 // Función de renderizado del contenido de la página "Sets"
 function render_sets_page() {
-    echo '<div class="wrap"><h1>Sets</h1><p>Hola Mundo!</p></div>';
+    ?>
+    <div class="wrap">
+        <h1>Sets</h1>
+
+        <!-- Formulario para añadir sets -->
+        <h2>Añadir Nuevo Set</h2>
+        <form method="post" enctype="multipart/form-data">
+            <label for="titulo">Título:</label><br>
+            <input type="text" name="titulo" id="titulo" required><br>
+
+            <label for="soundcloud_link">Enlace de SoundCloud:</label><br>
+            <input type="text" name="soundcloud_link" id="soundcloud_link" required><br>
+
+            <label for="youtube_link">Enlace de YouTube:</label><br>
+            <input type="text" name="youtube_link" id="youtube_link" required><br>
+
+            <label for="thumbnail">Thumbnail:</label><br>
+            <input type="file" name="thumbnail" id="thumbnail" accept="image/*" required><br>
+
+            <input type="submit" name="submit" value="Subir" class="button-primary">
+        </form>
+
+        <!-- Tabla para mostrar los sets -->
+        <h2>Sets Agregados</h2>
+        <table class="wp-list-table widefat fixed striped">
+            <thead>
+                <tr>
+                    <th>Título</th>
+                    <th>Enlace de SoundCloud</th>
+                    <th>Enlace de YouTube</th>
+                    <th>Thumbnail</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Aquí se mostrarán los sets agregados -->
+            </tbody>
+        </table>
+    </div>
+    <?php
 }
