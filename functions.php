@@ -10,7 +10,7 @@ add_action('wp_enqueue_scripts', 'wpb_adding_styles');
 // Sets Handling
 
 // Función para crear la tabla de sets al activar el tema
-register_activation_hook( __FILE__, 'crear_tabla_sets' );
+add_action('after_switch_theme', 'crear_tabla_sets');
 
 function crear_tabla_sets() {
     global $wpdb;
